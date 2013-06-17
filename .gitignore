@@ -1,14 +1,11 @@
-# Compiled Python files
-*.pyc
-
-# Folder view configuration files
+# files to always be ignored by git
 .DS_Store
-Desktop.ini
+.VolumeIcon.icns
+.fseventsd
 
-# Thumbnail cache files
-._*
-Thumbs.db
+# VI swap file
+*.swp
 
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
+# Weird Icon files
+Icon
+
