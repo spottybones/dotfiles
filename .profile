@@ -15,6 +15,12 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# Load shell dotfiles
+for file in ~/.{bash_prompt}; do
+    [ -r "$file" ] && source "$file"
+done
+unset file
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
