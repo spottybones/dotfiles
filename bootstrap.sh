@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
-git pull origin master
+git pull origin silver
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "LICENSE-GPL.txt" \
@@ -16,4 +16,4 @@ else
 	fi
 fi
 unset doIt
-source ~/.bash_profile
+# source ~/.bash_profile
