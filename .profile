@@ -16,7 +16,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Load shell dotfiles
-for file in ~/.{bash_prompt}; do
+for file in ~/.{bash_prompt,exports}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
