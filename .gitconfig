@@ -1,24 +1,22 @@
 [alias]
-  l = log --pretty=oneline -n 20 --graph
+    l = log --pretty=oneline -n 20 --graph
 [color]
-	ui = true
+    ui = true
 [user]
-	name = Scott Burns
-	email = sburns@centercitypcs.org
+    name = Scott Burns
+    email = sburns@centercitypcs.org
 [pager]
-	status = true
+    status = true
 [core]
-  autocrlf = false
-	safecrlf = true
-  ignorecase = false
-	excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
-	editor = /usr/bin/vim
+    autocrlf = false
+    safecrlf = true
+    ignorecase = false
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+    editor = /usr/bin/vim
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 [diff]
-  renames = copies
+    renames = copies
 [push]
-	default = matching
-[merge]
-	ff = true
+    default = matching
