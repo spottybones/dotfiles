@@ -99,6 +99,6 @@ alias l='ls -CF'
 set -o vi
 
 # PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-. /usr/local/share/python/virtualenvwrapper.sh
+# . /usr/local/share/python/virtualenvwrapper.sh
 
 export PGDATA=/usr/local/var/postgres
