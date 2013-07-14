@@ -29,8 +29,11 @@ else # OS X `ls`
 	colorflag="-G"
 fi
 
+# List all files colorized format
+alias l="ls ${colorflag}"
+
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
+alias ll="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
