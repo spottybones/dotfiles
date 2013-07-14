@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/scott/Sites/drupal/edl.dev/sites/all/themes/edl_theme_2/templates'
-let g:netrw_dirhist_2='/Users/scott/Sites/drupal/edl.dev/sites/all/modules/edl_defaults'
-let g:netrw_dirhist_3='/Users/scott/Sites/drupal/edl.dev/sites/all/themes/edl_theme_2'
-let g:netrw_dirhist_4='/Users/scott/Sites/drupal/edl.dev/sites/all/themes/edl_theme_2/css'
-let g:netrw_dirhist_5='/Users/scott/Sites/drupal/edl.dev/sites/all/themes/edl_theme_2'
-let g:netrw_dirhist_6='/Users/scott/Sites/drupal/edl.dev/sites/all/themes/edl_theme_2/css'
-let g:netrw_dirhist_7='/Users/scott/Sites/drupal/edl.dev/sites/all/themes/edl_theme_2'
