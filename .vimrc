@@ -94,3 +94,8 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" Install Pathogen
+execute pathogen#infect()
+filetype plugin indent on
+
