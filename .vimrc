@@ -99,3 +99,5 @@ endif
 execute pathogen#infect()
 filetype plugin indent on
 
+" NERDTree configuration
+let NERDTreeQuitOnOpen = 0
