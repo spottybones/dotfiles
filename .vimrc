@@ -97,6 +97,7 @@ endif
 
 " Install Pathogen
 execute pathogen#infect()
+execute pathogen#helptags()
 filetype plugin indent on
 
 " NERDTree configuration
