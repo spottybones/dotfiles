@@ -1,10 +1,15 @@
 # vim:set ft=sh:
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# set up GNU utility packages installed by Homebrew
+for GNU_PKG in coreutils gnu-sed; do
+  if [ -d /usr/local/opt/${GNU_PKG}/libexec/gnubin ]; then
+    export PATH="/usr/local/opt/${GNU_PKG}/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/${GNU_PKG}/libexec/gnuman:$MANPATH"
+  fi
+done
 
 export PGDATA=/usr/local/var/postgres
 export PATH="/usr/local/heroku/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-. /usr/local/share/python/virtualenvwrapper.sh
+if which virtualenv > /dev/null; then source /usr/local/share/python/virtualenvwrapper.sh; fi
