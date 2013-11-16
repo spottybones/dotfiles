@@ -75,6 +75,12 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" Default programming settings
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
   let save_cursor = getpos(".")
