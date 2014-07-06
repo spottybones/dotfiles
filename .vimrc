@@ -106,5 +106,18 @@ execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on
 
+function! StartUp()
+    NERDTree
+    if argc() != 0
+        wincmd p
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
 " NERDTree configuration
-let NERDTreeQuitOnOpen = 0
+let NERDTreeQuitOnOpen=0
+
+" ### My customizations
+" temporarily clear search highlighting
+:nnoremap \ :nohlsearch<cr>:<backspace>
