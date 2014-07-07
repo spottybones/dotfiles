@@ -141,3 +141,6 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # alias stfu="osascript -e 'set volume output muted true'"
 # alias pumpitup="osascript -e 'set volume 7'"
 # alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+# Print a string with current date and time
+alias now="date +'%Y%d%m%H%M'"
