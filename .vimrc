@@ -107,9 +107,9 @@ execute pathogen#helptags()
 filetype plugin indent on
 
 function! StartUp()
-    NERDTree
-    if argc() != 0
-        wincmd p
+    " open NERDTree if started with no files
+    if argc() == 0
+        NERDTree
     end
 endfunction
 
