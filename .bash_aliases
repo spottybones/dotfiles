@@ -144,3 +144,7 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Print a string with current date and time
 alias now="date +'%Y%d%m%H%M'"
+
+# quickly apply updates to servers
+alias g-up="ssh -t glyph sudo aptitude safe-upgrade"
+alias c-up="ssh -t ccpcs-puppet sudo apt-get upgrade"
