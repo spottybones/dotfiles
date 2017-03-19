@@ -143,7 +143,7 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # Print a string with current date and time
-alias now="date +'%Y%d%m%H%M'"
+alias now="date +'%Y%m%d%H%M'"
 
 # quickly apply updates to servers
 alias g-up="ssh -t glyph sudo aptitude safe-upgrade"
