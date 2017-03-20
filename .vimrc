@@ -112,6 +112,7 @@ autocmd VimEnter * call StartUp()
 
 " NERDTree configuration
 let NERDTreeQuitOnOpen=0
+silent! nmap <F2> :NERDTreeToggle<CR>
 
 " ### My customizations
 " temporarily clear search highlighting
