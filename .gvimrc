@@ -1,5 +1,6 @@
 " Use the Molokai theme
-colorscheme molokai-scott
+colorscheme solarized
+set background=dark
 " Use 14pt Menlo
 set guifont=Menlo:h14
 " Better line-height
