@@ -42,7 +42,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/scott/Applications/google-cloud-sdk/path.bash.inc'
+source "$HOME/Applications/google-cloud-sdk/path.bash.inc"
 
 # The next line enables shell command completion for gcloud.
-source '/Users/scott/Applications/google-cloud-sdk/completion.bash.inc'
+source "$HOME/Applications/google-cloud-sdk/completion.bash.inc"
