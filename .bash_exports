@@ -8,11 +8,10 @@ for GNU_PKG in coreutils gnu-sed; do
   fi
 done
 
-export PGDATA=/usr/local/var/postgres
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="~/Applications/instantclient_12_1:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which virtualenv > /dev/null; then source /usr/local/bin/virtualenvwrapper.sh; fi
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox

@@ -148,3 +148,7 @@ alias now="date +'%Y%m%d%H%M'"
 # quickly apply updates to servers
 alias g-up="ssh -t glyph sudo aptitude safe-upgrade"
 alias c-up="ssh -t ccpcs-puppet sudo apt-get upgrade"
+
+# display Vagrant's global status
+alias vgs="vagrant global-status"
+alias vg="vagrant"
