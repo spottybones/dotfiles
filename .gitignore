@@ -3,3 +3,4 @@
 .vim/swaps
 .vim/undo
 .vim/.netrwhist
+.ipython/profile_default/history.sqlite

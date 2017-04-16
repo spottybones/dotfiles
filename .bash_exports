@@ -20,6 +20,8 @@ my-jupyter-notebook () {
     docker run --rm \
     --name jupyter-notebook \
     -v $(pwd):/home/jovyan/work \
+    -v $HOME/.jupyter:/home/jovyan/.jupyter \
+    -v $HOME/.ipython:/home/jovyan/.ipython \
     -p 8888:8888 \
     jupyter/datascience-notebook start-notebook.sh
 }
@@ -29,5 +31,6 @@ my-ipython () {
     -it \
     --name ipython \
     -v $(pwd):/home/jovyan/work \
+    -v $HOME/.ipython:/home/jovyan/.ipython \
     jupyter/datascience-notebook start.sh ipython $@
 }
