@@ -464,3 +464,5 @@
 
 ## Username for the Session. Default is your system username.
 #c.Session.username = 'username'
+
+c.InlineBackend.figure_format = 'svg'
