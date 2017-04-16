@@ -16,10 +16,18 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
-jnotebook () {
+my-jupyter-notebook () {
     docker run --rm \
-    --name jnotebook \
+    --name jupyter-notebook \
     -v $(pwd):/home/jovyan/work \
     -p 8888:8888 \
     jupyter/datascience-notebook start-notebook.sh
+}
+
+my-ipython () {
+    docker run --rm \
+    -it \
+    --name ipython \
+    -v $(pwd):/home/jovyan/work \
+    jupyter/datascience-notebook start.sh ipython $@
 }
