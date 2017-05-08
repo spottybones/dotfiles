@@ -48,4 +48,4 @@ source "$HOME/Applications/google-cloud-sdk/path.bash.inc"
 source "$HOME/Applications/google-cloud-sdk/completion.bash.inc"
 
 # added by Anaconda3 4.3.1 installer
-export PATH="/Users/sburns/Projects/anaconda3/bin:$PATH"
+export PATH="/Users/sburns/opt/anaconda3/bin:$PATH"
