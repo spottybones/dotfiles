@@ -46,6 +46,3 @@ source "$HOME/Applications/google-cloud-sdk/path.bash.inc"
 
 # The next line enables shell command completion for gcloud.
 source "$HOME/Applications/google-cloud-sdk/completion.bash.inc"
-
-# added by Anaconda3 4.3.1 installer
-export PATH="${HOME}/opt/anaconda3/bin:$PATH"
