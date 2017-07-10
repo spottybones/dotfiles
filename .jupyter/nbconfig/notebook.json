@@ -11,5 +11,9 @@
         "0,r": "jupyter-notebook:confirm-restart-kernel-and-clear-output"
       }
     }
+  },
+  "Notebook": {
+    "Header": true,
+    "Toolbar": true
   }
 }
