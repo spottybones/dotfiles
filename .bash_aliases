@@ -146,7 +146,7 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias now="date +'%Y%m%d%H%M'"
 
 # quickly apply updates to servers
-alias g-up="ssh -t glyph sudo aptitude safe-upgrade"
+alias g-up="ssh -t glyph sudo apt dist-upgrade"
 alias c-up="ssh -t ccpcs-puppet sudo apt-get upgrade"
 
 # display Vagrant's global status
