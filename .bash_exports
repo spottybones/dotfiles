@@ -36,8 +36,8 @@ my-ipython () {
 }
 
 # check and upgrade Python packages
-pip-upgrade () {
-    pip install --upgrade $(pip list --outdated --format freeze | cut -d= -f1)
+pip2-upgrade () {
+    pip2 install --upgrade $(pip2 list --outdated --format freeze | cut -d= -f1)
 }
 
 pip3-upgrade () {
