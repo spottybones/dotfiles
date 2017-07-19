@@ -19,7 +19,7 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 my-jupyter-notebook () {
     docker run --rm \
     --name jupyter-notebook \
-    -v $(pwd):/home/jovyan/work \
+    -v $(pwd):/home/jovyan \
     -v $HOME/.jupyter:/home/jovyan/.jupyter \
     -v $HOME/.ipython:/home/jovyan/.ipython \
     -p 8888:8888 \
