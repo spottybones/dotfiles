@@ -36,10 +36,15 @@ my-ipython () {
 }
 
 # check and upgrade Python packages
-pip2-upgrade () {
-    pip2 install --upgrade $(pip2 list --outdated --format freeze | cut -d= -f1)
+pip-upgrade () {
+    pip install --upgrade $(pip list --outdated --format freeze | cut -d= -f1)
 }
 
-pip3-upgrade () {
-    pip3 install --upgrade $(pip3 list --outdated --format freeze | cut -d= -f1)
+usepy3 () {
+    source ~/.virtualenvs/python3/bin/activate
+}
+
+usepy2 () {
+    source ~/.virtualenvs/python2/bin/activate
+
 }
