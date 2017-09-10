@@ -10,6 +10,7 @@ done
 
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="~/Applications/instantclient_12_1:$PATH"
+export PATH="$HOME/opt/miniconda3/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
@@ -41,10 +42,13 @@ pip-upgrade () {
 }
 
 usepy3 () {
-    source ~/.virtualenvs/python3/bin/activate
+    source activate py3
 }
 
 usepy2 () {
-    source ~/.virtualenvs/python2/bin/activate
+    source activate py2
+}
 
+deactivate () {
+    source deactivate
 }
