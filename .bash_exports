@@ -10,14 +10,12 @@ done
 
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="~/Applications/instantclient_12_1:$PATH"
+export PATH="$HOME/opt/conda/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-
-# path to Anaconda3
-export PATH=/Users/scott/opt/anaconda3/bin:$PATH
 
 my-jupyter-notebook () {
     docker run --rm \
