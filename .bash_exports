@@ -16,6 +16,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
+# path to Anaconda3
+export PATH=/Users/scott/opt/anaconda3/bin:$PATH
+
 my-jupyter-notebook () {
     docker run --rm \
     --name jupyter-notebook \
