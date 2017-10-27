@@ -117,3 +117,5 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 " ### My customizations
 " temporarily clear search highlighting
 :nnoremap \ :nohlsearch<cr>:<backspace>
+
+colorscheme monokai
