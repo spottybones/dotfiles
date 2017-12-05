@@ -11,11 +11,13 @@ done
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="~/Applications/instantclient_12_1:$PATH"
 export PATH="$HOME/opt/conda/bin:$PATH"
+export PIP_CONFIG_FILE="$HOME/.config/pip/pip.conf"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export BOTO_CONFIG="$HOME/.boto"
 
 my-jupyter-notebook () {
     docker run --rm \
