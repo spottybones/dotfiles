@@ -37,20 +37,3 @@ my-ipython () {
     -v $HOME/.ipython:/home/jovyan/.ipython \
     jupyter/datascience-notebook start.sh ipython $@
 }
-
-# check and upgrade Python packages
-pip-upgrade () {
-    pip install --upgrade $(pip list --outdated --format freeze | cut -d= -f1)
-}
-
-usepy3 () {
-    source activate py3
-}
-
-usepy2 () {
-    source activate py2
-}
-
-deactivate () {
-    source deactivate
-}
