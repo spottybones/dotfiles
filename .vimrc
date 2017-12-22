@@ -101,14 +101,14 @@ execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on
 
-function! StartUp()
-    " open NERDTree if started with no files
-    if argc() == 0
-        NERDTree
-    end
-endfunction
+" function! StartUp()
+"     " open NERDTree if started with no files
+"     if argc() == 0
+"         NERDTree
+"     end
+" endfunction
 
-autocmd VimEnter * call StartUp()
+" autocmd VimEnter * call StartUp()
 
 " NERDTree configuration
 let NERDTreeQuitOnOpen=0
