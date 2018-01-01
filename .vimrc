@@ -20,6 +20,7 @@ let mapleader=","
 set binary
 set noeol
 " Centralize backups, swapfiles and undo history
+set history=200
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
