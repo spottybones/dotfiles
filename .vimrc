@@ -119,4 +119,4 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 " temporarily clear search highlighting
 :nnoremap \ :nohlsearch<cr>:<backspace>
 
-colorscheme monokai
+colorscheme molokai-scott
