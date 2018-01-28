@@ -42,7 +42,34 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # The next line updates PATH for the Google Cloud SDK.
-source "$HOME/Applications/google-cloud-sdk/path.bash.inc"
+[ -f $HOME/Applications/google-cloud-sdk/path.bash.inc ] && source "$HOME/Applications/google-cloud-sdk/path.bash.inc"
 
 # The next line enables shell command completion for gcloud.
-source "$HOME/Applications/google-cloud-sdk/completion.bash.inc"
+[ -f $HOME/Applications/google-cloud-sdk/completion.bash.inc ] && source "$HOME/Applications/google-cloud-sdk/completion.bash.inc"
+
+# start up ssh-agent if not in TMUX
+if [ -z "$TMUX" ]; then
+  # we're not in a TMUX session
+
+  if [ ! -z "$SSH_TTY" ]; then
+    # logged in via SSH
+
+    # if the SSH_AUTH_SOCK variable is missing create it
+    [ -z "$SSH_AUTH_SOCK" ] && export SSH_AUTH_SOCK="$HOME/.ssh/.auth_socket"
+
+    # create the auth socket if it doesn't exist
+    if [ ! -S "$SSH_AUTH_SOCK" ]; then
+      eval $(ssh-agent -a "$SSH_AUTH_SOCK")
+      echo $SSH_AGENT_PID > $HOME/.ssh/.auth_pid
+    fi
+
+    # if agent isn't defined recreate it from the pid file
+    [ -z "$SSH_AGENT_PID" ] && export SSH_AGENT_PID=$(cat $HOME/.ssh/.auth_pid)
+
+    # add default keys to ssh auth
+    ssh-add 2>/dev/null
+
+    # start or attach to tmux default session
+    tmux attach -t default || tmux new -s default
+  fi
+fi
