@@ -1,0 +1,22 @@
+[alias]
+    l = log --pretty=oneline -n 20 --graph
+[color]
+    ui = true
+[user]
+    name = Scott Burns
+    email = scott@lentigo.net
+[pager]
+    status = true
+[core]
+    autocrlf = false
+    safecrlf = true
+    ignorecase = false
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+    editor = /usr/bin/vim
+[branch]
+    autosetuprebase = always
+[diff]
+    renames = copies
+[push]
+    default = matching
