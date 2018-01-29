@@ -1,0 +1,19 @@
+{
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": false
+    }
+  },
+  "keys": {
+    "command": {
+      "bind": {
+        "0,c": "jupyter-notebook:clear-cell-output",
+        "0,r": "jupyter-notebook:confirm-restart-kernel-and-clear-output"
+      }
+    }
+  },
+  "Notebook": {
+    "Header": true,
+    "Toolbar": true
+  }
+}

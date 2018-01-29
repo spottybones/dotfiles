@@ -1,0 +1,39 @@
+# vim:set ft=sh:
+
+# set up GNU utility packages installed by Homebrew
+for GNU_PKG in coreutils gnu-sed; do
+  if [ -d /usr/local/opt/${GNU_PKG}/libexec/gnubin ]; then
+    export PATH="/usr/local/opt/${GNU_PKG}/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/${GNU_PKG}/libexec/gnuman:$MANPATH"
+  fi
+done
+
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="~/Applications/instantclient_12_1:$PATH"
+export PATH="$HOME/opt/conda/bin:$PATH"
+export PIP_CONFIG_FILE="$HOME/.config/pip/pip.conf"
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export BOTO_CONFIG="$HOME/.boto"
+
+my-jupyter-notebook () {
+    docker run --rm \
+    --name jupyter-notebook \
+    -v $(pwd):/home/jovyan \
+    -v $HOME/.jupyter:/home/jovyan/.jupyter \
+    -v $HOME/.ipython:/home/jovyan/.ipython \
+    -p 8888:8888 \
+    jupyter/datascience-notebook start-notebook.sh
+}
+
+my-ipython () {
+    docker run --rm \
+    -it \
+    --name ipython \
+    -v $(pwd):/home/jovyan/work \
+    -v $HOME/.ipython:/home/jovyan/.ipython \
+    jupyter/datascience-notebook start.sh ipython $@
+}
