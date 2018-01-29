@@ -69,7 +69,8 @@ if [ -z "$TMUX" ]; then
     # add default keys to ssh auth
     ssh-add 2>/dev/null
 
-    # start or attach to tmux default session
-    tmux attach -t default || tmux new -s default
   fi
+
+  # start or attach to tmux default session
+  tmux attach -t default || tmux new -s default
 fi
