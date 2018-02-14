@@ -1,11 +1,21 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
-git pull origin ccpcs000536
+# git pull origin ccpcs000536
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+  # symlink managed .dotfiles to the home directory
+  for DOTFILE in .{vim,gvim}rc .vim .dircolors .tmux.conf .gitconfig; do
+    ln -sFi $(pwd)/${DOTFILE} ~/${DOTFILE}
+  done
+  for DOTFILE in .bash_{aliases,exports,extra,profile,prompt} .bashrc; do
+    ln -sFi $(pwd)/${DOTFILE} ~/${DOTFILE}
+  done
+##  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+    ##--exclude ".vim" --exclude ".vimrc" --exclude ".gvimrc" \
+    ##--exclude ".gitignore" \
+    ##--exclude ".gitmodules" --exclude "README.md" \
+    ##--exclude "LICENSE-MIT.txt" -av --no-perms . ~
+  source ~/.bash_profile
 }
-
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt
 else
