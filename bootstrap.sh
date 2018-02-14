@@ -3,11 +3,11 @@ cd "$(dirname "${BASH_SOURCE}")"
 # git pull origin master
 function doIt() {
   # symlink managed .dotfiles to the home directory
-  for DOTFILE in .{vim,gvim}rc .vim .dircolors; do
-    ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
+  for DOTFILE in .{vim,gvim}rc .vim .dircolors .tmux.conf .gitconfig; do
+    ln -sFi $(pwd)/${DOTFILE} ~/${DOTFILE}
   done
   for DOTFILE in .bash_{aliases,exports,extra,profile,prompt} .bashrc; do
-    ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
+    ln -sFi $(pwd)/${DOTFILE} ~/${DOTFILE}
   done
 ##  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
     ##--exclude ".vim" --exclude ".vimrc" --exclude ".gvimrc" \
