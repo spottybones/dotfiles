@@ -1,7 +1,4 @@
 # Local VIM runtime files
-.vim/backups
-.vim/swaps
-.vim/undo
 .vim/.netrwhist
 .ipython/profile_default/history.sqlite
 .ipython/profile_default/db/dhist
