@@ -152,3 +152,6 @@ alias c-up="ssh -t ccpcs-puppet sudo apt-get upgrade"
 # display Vagrant's global status
 alias vgs="vagrant global-status"
 alias vg="vagrant"
+
+# Always enable colored `grep` output
+alias grep="grep --color=auto"
