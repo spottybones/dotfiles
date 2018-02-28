@@ -31,6 +31,9 @@ for GNU_PKG in coreutils gnu-sed; do
   fi
 done
 
+# if Python3 is installed add it's --user-base/bin directory to our PATH
+[ -n "$(which python3)" ] && export PATH="$(python3 -m site --user-base)/bin:$PATH"
+
 [ -d "/usr/local/heroku/bin" ] && export PATH="/usr/local/heroku/bin:$PATH"
 [ -d "$HOME/Applications/instantclient_12_1" ] && export PATH="$HOME/Applications/instantclient_12_1:$PATH"
 [ -d "$HOME/opt/conda/bin" ] && export PATH="$HOME/opt/conda/bin:$PATH"
