@@ -23,21 +23,6 @@ export MANPAGER="less -X"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
-# set up GNU utility packages installed by Homebrew
-for GNU_PKG in coreutils gnu-sed; do
-  if [ -d /usr/local/opt/${GNU_PKG}/libexec/gnubin ]; then
-    export PATH="/usr/local/opt/${GNU_PKG}/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/${GNU_PKG}/libexec/gnuman:$MANPATH"
-  fi
-done
-
-# if Python3 is installed add it's --user-base/bin directory to our PATH
-[ -n "$(which python3)" ] && export PATH="$(python3 -m site --user-base)/bin:$PATH"
-
-[ -d "/usr/local/heroku/bin" ] && export PATH="/usr/local/heroku/bin:$PATH"
-[ -d "$HOME/Applications/instantclient_12_1" ] && export PATH="$HOME/Applications/instantclient_12_1:$PATH"
-[ -d "$HOME/opt/conda/bin" ] && export PATH="$HOME/opt/conda/bin:$PATH"
-
 [ -f "$HOME/.config/pip/pip.conf" ] && export PIP_CONFIG_FILE="$HOME/.config/pip/pip.conf"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
