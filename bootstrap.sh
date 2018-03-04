@@ -4,10 +4,10 @@ cd "$(dirname "${BASH_SOURCE}")"
 function doIt() {
   # symlink managed .dotfiles to the home directory
   for DOTFILE in .{vim,gvim}rc .vim .dircolors .tmux.conf .gitconfig; do
-    ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
+    [ -f "$(pwd)/$DOTFILE" ] && ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
   done
-  for DOTFILE in .bash_{profile,path,prompt,exports,aliases,functions,extra} .bashrc; do
-    ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
+  for DOTFILE in .bash_{profile,path,prompt,exports,aliases,functions,extra} .bashrc .bash_logout; do
+    [ -f "$(pwd)/$DOTFILE" ] && ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
   done
 ##  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
     ##--exclude ".vim" --exclude ".vimrc" --exclude ".gvimrc" \
