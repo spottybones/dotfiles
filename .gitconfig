@@ -9,11 +9,12 @@
     status = true
 [core]
     autocrlf = false
-    safecrlf = true
     ignorecase = false
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
     editor = /usr/bin/vim
+	safecrlf = false
+	eol = lf
 [branch]
     autosetuprebase = always
 [diff]
