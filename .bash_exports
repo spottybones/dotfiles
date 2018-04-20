@@ -30,6 +30,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 [ -f "$HOME/.boto" ] && export BOTO_CONFIG="$HOME/.boto"
 
+# set GPG_TTY for gpg-agent
+GPG_TTY=$(tty)
+export GPG_TTY
+
 my-jupyter-notebook () {
     docker run --rm \
     --name jupyter-notebook \
