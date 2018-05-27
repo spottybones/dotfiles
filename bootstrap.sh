@@ -6,15 +6,20 @@ function doIt() {
   for DOTFILE in .{vim,gvim}rc .vim .dircolors .tmux.conf .gitconfig; do
     [ -f "$(pwd)/$DOTFILE" ] && ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
   done
-  for DOTFILE in .bash_{profile,path,prompt,exports,aliases,functions,extra} .bashrc .bash_logout; do
-    [ -f "$(pwd)/$DOTFILE" ] && ln -sTi $(pwd)/${DOTFILE} ~/${DOTFILE}
+
+  # copy bash configuration
+  for DOTFILE in .bash{rc,_profile,_logout}; do
+    [ -f ~/${DOTFILE} ] && rm ~/${DOTFILE}
+    cp ${DOTFILE} ~/${DOTFILE}
   done
+  rsync -av ./.config ~/
+
 ##  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
     ##--exclude ".vim" --exclude ".vimrc" --exclude ".gvimrc" \
     ##--exclude ".gitignore" \
     ##--exclude ".gitmodules" --exclude "README.md" \
     ##--exclude "LICENSE-MIT.txt" -av --no-perms . ~
-  source ~/.bash_profile
+  # source ~/.bash_profile
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt
