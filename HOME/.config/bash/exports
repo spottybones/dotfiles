@@ -23,6 +23,9 @@ export MANPAGER="less -X"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
+# set location of IPython configuration per XDG spec
+[ -d "${HOME}/.config/ipython" ] && export IPYTHONDIR="${HOME}/.config/ipython"
+
 [ -f "$HOME/.config/pip/pip.conf" ] && export PIP_CONFIG_FILE="$HOME/.config/pip/pip.conf"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
