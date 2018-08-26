@@ -21,10 +21,10 @@ set binary
 set noeol
 " Centralize backups, swapfiles and undo history
 set history=200
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set backupdir=~/.local/share/vim/backups
+set directory=~/.local/share/vim/swaps
 if exists("&undodir")
-  set undodir=~/.vim/undo
+  set undodir=~/.local/share/vim/undo
 endif
 
 " Respect modeline in files

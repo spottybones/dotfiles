@@ -4,6 +4,8 @@ cd "$(dirname "${BASH_SOURCE}")"
 function doIt() {
   # rsync contents of HOME to $HOME
   rsync -av ./HOME/ ~/
+  # ensure VIM temp directories exist
+  mkdir -p ${HOME}/.local/share/vim/{backups,swaps,undo}
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
