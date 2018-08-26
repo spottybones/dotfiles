@@ -38,5 +38,5 @@
 	path = HOME/.vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/bundle/ansible-vim"]
-	path = vim/bundle/ansible-vim
+	path = HOME/.vim/bundle/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim
