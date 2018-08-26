@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
+
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+
 # git pull origin ccpcs000536
 function doIt() {
   # rsync contents of HOME to $HOME
   rsync -av ./HOME/ ~/
   # ensure VIM temp directories exist
-  mkdir -p ${HOME}/.local/share/vim/{backups,swaps,undo}
+  mkdir -p ${XDG_DATA_HOME}/vim/{backups,swaps,undo}
+  # ensure IPython/Jupyter temp directories exist
+  mkdir -p ${XDG_DATA_HOME}/{ipython,jupyter}
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

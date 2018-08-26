@@ -23,8 +23,17 @@ export MANPAGER="less -X"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
+# XDG Spec directories
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+
 # set location of IPython configuration per XDG spec
-[ -d "${HOME}/.config/ipython" ] && export IPYTHONDIR="${HOME}/.config/ipython"
+[ -d "${XDG_CONFIG_HOME}/ipython" ] && export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
+
+# set location of Jupyter configuration per XDG spec
+[ -d "${XDG_DATA_HOME}/jupyter" ] && export JUPYTER_PATH="${XDG_DATA_HOME}/jupyter"
+[ -d "${XDG_CONFIG_HOME}/jupyter" ] && export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
 
 [ -f "$HOME/.config/pip/pip.conf" ] && export PIP_CONFIG_FILE="$HOME/.config/pip/pip.conf"
 
