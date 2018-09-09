@@ -119,5 +119,5 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 " temporarily clear search highlighting
 :nnoremap \ :nohlsearch<cr>:<backspace>
 
-colorscheme molokai-scott
+colorscheme gruvbox
 highlight Comment cterm=italic
