@@ -13,6 +13,8 @@ function doIt() {
   mkdir -p ${XDG_DATA_HOME}/vim/{backups,swaps,undo}
   # ensure IPython/Jupyter temp directories exist
   mkdir -p ${XDG_DATA_HOME}/{ipython,jupyter}
+  # install xterm-256color-italic TERM entry
+  tic xterm-256color-italic.terminfo
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

@@ -120,3 +120,4 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 :nnoremap \ :nohlsearch<cr>:<backspace>
 
 colorscheme molokai-scott
+highlight Comment cterm=italic
