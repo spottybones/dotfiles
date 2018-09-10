@@ -14,7 +14,7 @@ function doIt() {
   # ensure IPython/Jupyter temp directories exist
   mkdir -p ${XDG_DATA_HOME}/{ipython,jupyter}
   # install xterm-256color-italic TERM entry
-  tic xterm-256color-italic.terminfo
+  tic ./external_configs/xterm-256color-italic.terminfo
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
