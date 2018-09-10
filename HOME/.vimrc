@@ -121,3 +121,4 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 
 colorscheme gruvbox
 highlight Comment cterm=italic
+let g:gruvbox_contrast_dark = 'hard'
