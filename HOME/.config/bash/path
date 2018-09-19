@@ -1,5 +1,8 @@
 # vim:set ft=sh:
 
+# Default to Homebrew Python 3 on macOS, if installed
+[ -d /usr/local/opt/python/libexec/bin ] && export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # if Python3 is installed add it's --user-base/bin directory to our PATH
 [ -n "$(which python3)" ] && export PATH="$(python3 -m site --user-base)/bin:$PATH"
 
