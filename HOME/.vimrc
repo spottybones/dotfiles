@@ -70,6 +70,8 @@ set title
 set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+" Use dark colorscheme variants
+set background=dark
 
 " Default programming settings
 set softtabstop=4
@@ -122,3 +124,5 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 colorscheme gruvbox
 highlight Comment cterm=italic
 let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italicize_comments = '1'
+let g:gruvbox_italic = '1'
