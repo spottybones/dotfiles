@@ -145,13 +145,5 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # Print a string with current date and time
 alias now="date +'%Y%m%d%H%M'"
 
-# quickly apply updates to servers
-alias g-up="ssh -t glyph sudo apt dist-upgrade"
-alias c-up="ssh -t ccpcs-puppet sudo apt-get upgrade"
-
-# display Vagrant's global status
-alias vgs="vagrant global-status"
-alias vg="vagrant"
-
 # Always enable colored `grep` output
 alias grep="grep --color=auto"
