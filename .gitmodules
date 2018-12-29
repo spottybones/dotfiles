@@ -40,3 +40,6 @@
 [submodule "vim/bundle/ansible-vim"]
 	path = HOME/.vim/bundle/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim
+[submodule "HOME/.vim/bundle/typescript-vim"]
+	path = HOME/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
