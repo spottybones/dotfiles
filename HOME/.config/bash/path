@@ -17,3 +17,6 @@ done
 [ -d "/usr/local/heroku/bin" ] && export PATH="/usr/local/heroku/bin:$PATH"
 [ -d "$HOME/Applications/instantclient_12_1" ] && export PATH="$HOME/Applications/instantclient_12_1:$PATH"
 [ -d "$HOME/opt/conda/bin" ] && export PATH="$HOME/opt/conda/bin:$PATH"
+
+# add path to GAM
+[ -x "$HOME/Applications/gam/gam" ] && export PATH="$HOME/Applications/gam:$PATH"
