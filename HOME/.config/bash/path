@@ -18,5 +18,8 @@ done
 [ -d "$HOME/Applications/instantclient_12_1" ] && export PATH="$HOME/Applications/instantclient_12_1:$PATH"
 [ -d "$HOME/opt/conda/bin" ] && export PATH="$HOME/opt/conda/bin:$PATH"
 
+# Homebrew's sbin
+[ -d "/usr/local/sbin" ] && export PATH="/usr/local/sbin:$PATH"
+
 # add path to GAM
 [ -x "$HOME/Applications/gam/gam" ] && export PATH="$HOME/Applications/gam:$PATH"
