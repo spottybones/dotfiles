@@ -4,6 +4,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/scott/.oh-my-zsh"
 
+# XDG Spec directories
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
