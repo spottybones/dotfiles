@@ -117,3 +117,7 @@ alias la="ls -la ${colorflag}"
 alias lsd='ls -l ${colorflag} | grep "^d"'
 alias ls="command ls ${colorflag}"
 
+# start or attach to tmux default session
+if [[ -z "${TMUX}" ]]; then
+  tmux attach -t default || tmux new -s default
+fi
