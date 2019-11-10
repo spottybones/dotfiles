@@ -126,3 +126,8 @@ highlight Comment cterm=italic
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italicize_comments = '1'
 let g:gruvbox_italic = '1'
+
+" enable Powerline
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
