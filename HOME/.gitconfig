@@ -12,7 +12,7 @@
     ignorecase = false
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
-    editor = /usr/bin/vim
+    editor = /usr/local/bin/vim
 	safecrlf = false
 	eol = lf
 [branch]
