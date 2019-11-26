@@ -66,6 +66,8 @@ SOLARIZED_THEME="dark"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+ZSH_TMUX_AUTOSTART="true"
+
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.config/zsh
 
@@ -116,8 +118,3 @@ alias ll="ls -l ${colorflag}"
 alias la="ls -la ${colorflag}"
 alias lsd='ls -l ${colorflag} | grep "^d"'
 alias ls="command ls ${colorflag}"
-
-# start or attach to tmux default session
-if [[ -z "${TMUX}" ]]; then
-  tmux attach -t default || tmux new -s default
-fi
