@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="${HOME}/bin:/usr/local/bin:/usr/local/sbin:${PATH}"
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
@@ -68,6 +68,11 @@ SOLARIZED_THEME="dark"
 
 ZSH_TMUX_AUTOSTART="true"
 
+# set LS_COLORS to trigger proper coloring
+if [[ "$(command -v gdircolors)" ]]; then
+    eval $(gdircolors)
+fi
+
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.config/zsh
 
@@ -112,9 +117,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-colorflag="--color"
-alias l="ls ${colorflag}"
-alias ll="ls -l ${colorflag}"
-alias la="ls -la ${colorflag}"
-alias lsd='ls -l ${colorflag} | grep "^d"'
-alias ls="command ls ${colorflag}"

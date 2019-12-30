@@ -16,28 +16,9 @@ alias v="vim"
 alias o="open"
 alias oo="open ."
 
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-else # OS X `ls`
-	colorflag="-G"
-fi
-
-# List all files colorized format
-alias l="ls ${colorflag}"
-
-# List all files colorized in long format
-alias ll="ls -l ${colorflag}"
-
-# List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
-
-# List only directories
-alias lsd='ls -l ${colorflag} | grep "^d"'
-
-# Always use color output for `ls`
-alias ls="command ls ${colorflag}"
-eval $(dircolors ~/.dircolors/solarized-dark)
+# base directory listing
+alias l="ls"
+alias ll='ls -l'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
