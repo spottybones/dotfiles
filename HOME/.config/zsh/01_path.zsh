@@ -12,6 +12,3 @@
 
 # Homebrew's sbin
 [ -d "/usr/local/sbin" ] && export PATH="/usr/local/sbin:$PATH"
-
-# add path to GAM
-[ -x "$HOME/Applications/gam/gam" ] && export PATH="$HOME/Applications/gam:$PATH"
