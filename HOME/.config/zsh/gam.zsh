@@ -1,1 +1,1 @@
-alias gam="${HOME}/Applications/gam/gam"
+[[ -d "${HOME}/Applications/gam" ]] && export PATH="${HOME}/Applications/gam:${PATH}"
