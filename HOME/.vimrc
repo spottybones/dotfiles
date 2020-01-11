@@ -99,9 +99,26 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
-" Install Pathogen
-execute pathogen#infect()
-execute pathogen#helptags()
+"install vim-plug if needed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'pearofducks/ansible-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'chr4/nginx.vim'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-commentary'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-surround'
+call plug#end()
+
 filetype plugin indent on
 
 " function! StartUp()
