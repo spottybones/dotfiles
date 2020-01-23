@@ -118,6 +118,7 @@ Plug 'tpope/vim-commentary'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'cespare/vim-toml'
 call plug#end()
 
 filetype plugin indent on
