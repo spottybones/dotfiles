@@ -85,6 +85,7 @@ plugins=(
     gcloud
     git
     osx
+    poetry
     pyenv
     tmux
     vi-mode
