@@ -107,18 +107,20 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'preservim/nerdtree'
-Plug 'jiangmiao/auto-pairs'
-Plug 'pearofducks/ansible-vim'
-Plug 'kien/ctrlp.vim'
-Plug 'chr4/nginx.vim'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'leafgarland/typescript-vim'
-Plug 'tpope/vim-commentary'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-surround'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
+Plug 'chr4/nginx.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kien/ctrlp.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
+Plug 'pearofducks/ansible-vim'
+Plug 'preservim/nerdtree'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 filetype plugin indent on
