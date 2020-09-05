@@ -149,6 +149,8 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italicize_comments = '1'
 let g:gruvbox_italic = '1'
 
+let g:pymode_options_max_line_length=89
+
 " enable Powerline
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
