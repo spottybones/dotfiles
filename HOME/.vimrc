@@ -35,6 +35,8 @@ set exrc
 set secure
 " Enable line numbers
 set number
+" Enable relative line numbering
+set relativenumber
 " Enable syntax highlighting
 syntax on
 " Highlight current line
