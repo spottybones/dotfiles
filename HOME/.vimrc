@@ -156,3 +156,6 @@ python3 del powerline_setup
 
 " indentLine character
 let g:indentLine_char = '⋮'
+
+" map jk to <Esc>
+imap jk <Esc>
