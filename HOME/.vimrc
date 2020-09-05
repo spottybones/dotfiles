@@ -121,6 +121,7 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'yggdroot/indentline'
 call plug#end()
 
 filetype plugin indent on
@@ -152,3 +153,6 @@ let g:gruvbox_italic = '1'
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+
+" indentLine character
+let g:indentLine_char = '⋮'
