@@ -86,6 +86,7 @@ plugins=(
     gcloud
     git
     osx
+    pipenv
     poetry
     pyenv
     tmux
@@ -95,6 +96,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export PIPENV_VENV_IN_PROJECT=1
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
