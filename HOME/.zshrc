@@ -86,7 +86,6 @@ plugins=(
     gcloud
     git
     osx
-    pipenv
     poetry
     pyenv
     tmux
