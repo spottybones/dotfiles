@@ -5,7 +5,9 @@ set nocompatible
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
-set esckeys
+if !has('nvim')
+    set esckeys
+endif
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 " Optimize for fast terminal connections
@@ -123,6 +125,8 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'yggdroot/indentline'
 call plug#end()
 
@@ -153,10 +157,10 @@ let g:gruvbox_italic = '1'
 
 let g:pymode_options_max_line_length=89
 
-" enable Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+" Powerline Fonts
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'base16_gruvbox_dark_hard'
 
 " indentLine character
 let g:indentLine_char = '⋮'
