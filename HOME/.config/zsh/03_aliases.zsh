@@ -82,3 +82,4 @@ alias grep="grep --color=auto"
 # Reset TERM when using SSH to connect to other hosts. Necessary because
 # we use a custom $TERM locally.
 alias ssh="TERM=xterm-256color ssh "
+alias mp="TERM=xterm-256color multipass "
