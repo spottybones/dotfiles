@@ -21,3 +21,5 @@
     renames = copies
 [push]
     default = matching
+[init]
+	defaultBranch = main
