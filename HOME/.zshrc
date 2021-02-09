@@ -84,6 +84,7 @@ ZSH_CUSTOM=$HOME/.config/zsh
 plugins=(
     ansible
     aws
+    brew
     gcloud
     git
     osx
