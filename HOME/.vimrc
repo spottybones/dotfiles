@@ -156,6 +156,7 @@ let g:gruvbox_italicize_comments = '1'
 let g:gruvbox_italic = '1'
 
 let g:pymode_options_max_line_length=89
+let g:pymode_lint_ignore = ["E231"]
 
 " Powerline Fonts
 let g:airline_powerline_fonts = 1
