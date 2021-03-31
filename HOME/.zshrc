@@ -128,3 +128,7 @@ export PIPENV_VENV_IN_PROJECT=1
 
 # rehash commands to enable aliases for gnu-utils commands
 hash -rf
+
+# Update PATH for the Google Cloud SDK.
+export CLOUDSDK_HOME="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+export CLOUDSDK_PYTHON="$(pyenv prefix 3.8.8)/bin/python"
