@@ -98,10 +98,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PIPENV_VENV_IN_PROJECT=1
-
-# rehash commands to enable aliases for gnu-utils commands
-hash -rf
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -126,3 +122,9 @@ hash -rf
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Pipenv
+export PIPENV_VENV_IN_PROJECT=1
+
+# rehash commands to enable aliases for gnu-utils commands
+hash -rf
