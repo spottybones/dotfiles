@@ -126,6 +126,9 @@ source $ZSH/oh-my-zsh.sh
 # Pipenv
 export PIPENV_VENV_IN_PROJECT=1
 
+# use globally defined pyenv for PIPX if pyenv is installed
+[ -n "${commands[pyenv]}" ] && export PIPX_DEFAULT_PYTHON="$(pyenv prefix $(pyenv global))/bin/python"
+
 # rehash commands to enable aliases for gnu-utils commands
 hash -rf
 
