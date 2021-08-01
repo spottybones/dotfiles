@@ -114,6 +114,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
