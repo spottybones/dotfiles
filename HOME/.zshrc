@@ -138,3 +138,8 @@ export CLOUDSDK_PYTHON="$(pyenv prefix $(pyenv global))/bin/python"
 
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
+
+# source home .env file if present
+if [[ -f "${HOME}/.env" ]]; then
+    source "${HOME}/.env"
+fi
