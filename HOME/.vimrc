@@ -115,6 +115,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
@@ -153,11 +154,8 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 " temporarily clear search highlighting
 :nnoremap \ :nohlsearch<cr>:<backspace>
 
-colorscheme gruvbox
+colorscheme dracula
 highlight Comment cterm=italic
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italicize_comments = '1'
-let g:gruvbox_italic = '1'
 
 let g:pymode_options_max_line_length=89
 let g:pymode_lint_ignore = ["E231"]
@@ -165,7 +163,7 @@ let g:pymode_lint_ignore = ["E231"]
 " Powerline Fonts
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'base16_gruvbox_dark_hard'
+let g:airline_theme = 'dracula'
 
 " indentLine character
 let g:indentLine_char = '⋮'
