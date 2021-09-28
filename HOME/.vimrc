@@ -132,7 +132,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'yggdroot/indentline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 filetype plugin indent on
