@@ -139,6 +139,11 @@ export CLOUDSDK_PYTHON="$(pyenv prefix $(pyenv global))/bin/python"
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
 
+# set up Rust toolchain if installed
+if [[ -f "${HOME}/.cargo/env" ]]; then
+    source "${HOME}/.cargo/env"
+fi
+
 # source home .env file if present
 if [[ -f "${HOME}/.env" ]]; then
     source "${HOME}/.env"
