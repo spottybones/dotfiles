@@ -101,6 +101,8 @@ if has("autocmd")
   filetype on
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " Override ColorScheme attempts to change terminal background
+  autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 endif
 
 "install vim-plug if needed
