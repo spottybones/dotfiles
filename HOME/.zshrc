@@ -9,6 +9,11 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 
+# set up Rust toolchain if installed
+if [[ -f "${HOME}/.cargo/env" ]]; then
+    source "${HOME}/.cargo/env"
+fi
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -91,6 +96,7 @@ plugins=(
     macos
     poetry
     pyenv
+    rust
     tmux
     vi-mode
 )
@@ -138,11 +144,6 @@ export CLOUDSDK_PYTHON="$(pyenv prefix $(pyenv global))/bin/python"
 
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
-
-# set up Rust toolchain if installed
-if [[ -f "${HOME}/.cargo/env" ]]; then
-    source "${HOME}/.cargo/env"
-fi
 
 # source home .env file if present
 if [[ -f "${HOME}/.env" ]]; then
