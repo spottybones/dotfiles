@@ -140,7 +140,7 @@ hash -rf
 
 # Update PATH for the Google Cloud SDK.
 export CLOUDSDK_HOME="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-export CLOUDSDK_PYTHON="$(pyenv prefix $(pyenv global))/bin/python"
+export CLOUDSDK_PYTHON="/usr/local/bin/python3"
 
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
