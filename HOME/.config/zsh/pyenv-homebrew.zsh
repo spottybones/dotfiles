@@ -7,7 +7,7 @@ export PATH="$HOMEBREW_PREFIX/opt/tcl-tk/bin:$PATH"
 # Use PyEnv to set Python Environment
 export PYENV_SHELL=zsh
 export PYENV_ROOT=$(pyenv root)
-# export PYENV_VERSION=$(pyenv version-name)
+export PYENV_VERSION=$(pyenv version-name)
 export PYTHONPATH=$PYENV_ROOT/shims
 
 # PyEnv & HOMEBREW Build variables
