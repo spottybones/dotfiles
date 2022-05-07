@@ -7,8 +7,6 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 
 # git pull origin ccpcs000536
 function doIt() {
-  # rsync contents of HOME to $HOME
-  rsync -av ./HOME/ ~/
   # ensure VIM temp directories exist
   mkdir -p "${XDG_DATA_HOME}"/vim/{backups,swaps,undo}
   # ensure IPython/Jupyter temp directories exist
