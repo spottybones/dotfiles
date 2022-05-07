@@ -10,7 +10,7 @@
 *.swp
 
 # Weird Icon files
-Icon
+Icon
 
 # dotenv files
 .env
