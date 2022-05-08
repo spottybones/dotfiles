@@ -166,6 +166,16 @@ function M.setup()
       requires = "kyazdani42/nvim-web-devicons",
     }
 
+    -- nvim-tree for file browsing
+    use {
+      "kyazdani42/nvim-tree.lua",
+      requires = "kyazdani42/nvim-web-devicons",
+      cmd = { "NvimTreeToggle", "NvimTreeClose" },
+      config = function()
+        require("config/nvimtree").setup()
+      end,
+    }
+
     if packer_bootstrap then
       print "Neovim restart required after installation!"
       require("packer").sync()
