@@ -8,6 +8,7 @@
 [pager]
     status = true
 [core]
+    pager = delta
     autocrlf = false
     ignorecase = false
     excludesfile = ~/.gitignore
@@ -19,7 +20,15 @@
     autosetuprebase = always
 [diff]
     renames = copies
+    colorMoved = default
 [push]
     default = matching
 [init]
 	defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    light = false
+[merge]
+    conflictstyle = diff3
