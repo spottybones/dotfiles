@@ -26,6 +26,12 @@ opt.path:remove "/usr/include"
 opt.path:append "**"
 opt.wildignorecase = true
 
+-- White space
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.softtabstop = 4
+opt.tabstop = 4
+
 -- Highlight on yank
 vim.cmd [[
   augroup YankHighlight
