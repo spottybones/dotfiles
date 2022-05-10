@@ -36,14 +36,6 @@ function M.setup()
       lualine_y = {},
       lualine_z = {},
     },
-    tabline = {
-      lualine_a = {
-        {
-          "buffers",
-          show_filename_only = false,
-        },
-      },
-    },
     extensions = {},
   }
 end
