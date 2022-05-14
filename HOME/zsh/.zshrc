@@ -143,8 +143,8 @@ export POETRY_VIRTUALENVS_IN_PROJECT=1
 hash -rf
 
 # Update PATH for the Google Cloud SDK.
-export CLOUDSDK_HOME="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-export CLOUDSDK_PYTHON="/usr/local/bin/python3"
+export CLOUDSDK_HOME="${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+export CLOUDSDK_PYTHON="${HOMEBREW_PREFIX}/bin/python3"
 
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"

@@ -1,6 +1,10 @@
 if [[ -z "${PATH_SET}" ]]; then
+
     # set starting command paths
-    export PATH="${HOME}/.local/bin:/usr/local/bin:/usr/local/sbin:${PATH}"
+    export PATH="${HOME}/.local/bin:${PATH}"
+
+    # Homebrew paths
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 
     # If installed, initialize path for `pyenv` here
     if command -v pyenv > /dev/null 2>&1; then
