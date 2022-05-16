@@ -17,6 +17,7 @@ brew install fzf
 brew install ripgrep
 brew install fd
 brew install google-cloud-sdk
+brew install sf-pwgen
 
 # application software in casks
 brew install --cask moom
