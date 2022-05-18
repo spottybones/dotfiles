@@ -25,6 +25,7 @@ brew install --cask 1password
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask bbedit
+brew install --cask snagit
 
 # nerdfonts and symbols for iTterm
 brew tap homebrew/cask-fonts
