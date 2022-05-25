@@ -152,12 +152,18 @@ function M.setup()
       end,
     }
 
+    -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
+      opt = true,
+      event = "BufRead",
       run = ":TSUpdate",
       config = function()
         require("config.treesitter").setup()
       end,
+      requires = {
+        { "nvim-treesitter/nvim-treesitter-textobjects" }
+      }
     }
 
     -- FZF for fuzzy file finding
