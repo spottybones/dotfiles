@@ -1,0 +1,23 @@
+---
+- name: Install Packages
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Ensure required packages are installed
+      ansible.builtin.package:
+        name:
+          - bat
+          - build-essential
+          - make
+          - pipx
+          - stow
+          - tmux
+          - zsh
+        state: latest
+    - name: Ensure required snaps are installed
+      ansible.builtin.snap:
+        name:
+          - nvim
+        classic: True
+        state: present
