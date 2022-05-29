@@ -163,7 +163,7 @@ function M.setup()
       end,
       requires = {
         { "nvim-treesitter/nvim-treesitter-textobjects" }
-      }
+      },
     }
 
     -- FZF for fuzzy file finding
