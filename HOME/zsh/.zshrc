@@ -149,6 +149,10 @@ export CLOUDSDK_PYTHON="${HOMEBREW_PREFIX}/bin/python3"
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
 
+# SSH agent provided by 1Password
+[[ -S "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ]] && \
+    export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
 # source home .env file if present
 if [[ -f "${HOME}/.env" ]]; then
     source "${HOME}/.env"
