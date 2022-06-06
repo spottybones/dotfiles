@@ -1,6 +1,7 @@
 ---
 - name: Install Packages
   hosts: localhost
+  connection: local
   become: true
 
   tasks:
@@ -15,9 +16,3 @@
           - tmux
           - zsh
         state: latest
-    - name: Ensure required snaps are installed
-      ansible.builtin.snap:
-        name:
-          - nvim
-        classic: True
-        state: present
