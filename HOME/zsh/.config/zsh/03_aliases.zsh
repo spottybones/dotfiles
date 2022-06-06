@@ -83,3 +83,9 @@ alias grep="grep --color=auto"
 # we use a custom $TERM locally.
 alias ssh="TERM=xterm-256color ssh "
 alias mp="TERM=xterm-256color multipass "
+
+# Aliases for Linux to match command names used on Darwin
+[[ "$(uname -s)" = "Linux" ]] && {
+    alias bat='batcat '
+    alias nvim='vim '
+}
