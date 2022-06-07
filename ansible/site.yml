@@ -12,6 +12,7 @@
             name:
               - bat
               - build-essential
+              - fzf
               - make
               - pipx
               - stow

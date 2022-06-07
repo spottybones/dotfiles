@@ -11,9 +11,6 @@ if [[ -f "${HOME}/.cargo/env" ]]; then
     source "${HOME}/.cargo/env"
 fi
 
-# FZF configuration for plugin
-FZF_BASE="/usr/local/opt/fzf"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
