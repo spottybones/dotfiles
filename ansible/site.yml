@@ -18,4 +18,4 @@
               - tmux
               - zsh
             state: latest
-      when: ansible_os_family == "Linux"
+      when: ansible_system == "Linux"
