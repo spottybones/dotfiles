@@ -136,7 +136,7 @@ function M.setup()
 
     use {
       "nvim-lualine/lualine.nvim",
-      event = "VimEnter",
+      after = "nvim-treesitter",
       config = function()
         require("config.lualine").setup()
       end,
