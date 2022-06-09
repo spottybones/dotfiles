@@ -13,6 +13,7 @@
               - bat
               - build-essential
               - fzf
+              - keychain
               - make
               - pipx
               - stow
