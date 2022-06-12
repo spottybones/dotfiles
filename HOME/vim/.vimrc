@@ -117,8 +117,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -126,13 +126,13 @@ Plug 'pangloss/vim-javascript'
 Plug 'pearofducks/ansible-vim'
 Plug 'preservim/nerdtree'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'yggdroot/indentline'
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 filetype plugin indent on
@@ -154,8 +154,14 @@ silent! nmap <F2> :NERDTreeToggle<CR>
 " temporarily clear search highlighting
 :nnoremap \ :nohlsearch<cr>:<backspace>
 
-colorscheme dracula
+" Material colorscheme
+if (has('termguicolors'))
+    set termguicolors
+endif
+let g:material_theme_style = "ocean"
+let g:material_terminal_italics = 1
 highlight Comment cterm=italic
+colorscheme material
 
 let g:pymode_options_max_line_length=89
 let g:pymode_lint_ignore = ["E231"]
@@ -163,7 +169,7 @@ let g:pymode_lint_ignore = ["E231"]
 " Powerline Fonts
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'dracula'
+let g:airline_theme = "molokai"
 
 " indentLine character
 let g:indentLine_char = '⋮'
