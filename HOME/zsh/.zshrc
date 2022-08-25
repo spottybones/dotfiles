@@ -85,6 +85,7 @@ ZSH_CUSTOM=$HOME/.config/zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     ansible
+    asdf
     aws
     brew
     fzf
@@ -93,7 +94,6 @@ plugins=(
     gnu-utils
     macos
     poetry
-    pyenv
     rust
     tmux
     vi-mode
@@ -134,7 +134,7 @@ export PIPENV_VENV_IN_PROJECT=1
 export POETRY_VIRTUALENVS_IN_PROJECT=1
 
 # use globally defined pyenv for PIPX if pyenv is installed
-[ -n "${commands[pyenv]}" ] && export PIPX_DEFAULT_PYTHON="$(pyenv prefix $(pyenv global))/bin/python"
+[ -n "${commands[asdf]}" ] && export PIPX_DEFAULT_PYTHON="$(asdf which python current)"
 
 # rehash commands to enable aliases for gnu-utils commands
 hash -rf
