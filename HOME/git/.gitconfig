@@ -32,3 +32,5 @@
     light = false
 [merge]
     conflictstyle = diff3
+[rebase]
+	autoStash = true
