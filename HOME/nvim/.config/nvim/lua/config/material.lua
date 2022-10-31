@@ -16,8 +16,8 @@ function M.setup()
       line_numbers = true,
     },
 
-    italics = {
-      comments = true, -- Enable italic comments
+    styles = {
+      comments = { italic = true }, -- Enable italic comments
     },
 
     high_visibility = {
