@@ -15,6 +15,7 @@
               - fzf
               - keychain
               - make
+              - pass
               - pipx
               - stow
               - tmux
