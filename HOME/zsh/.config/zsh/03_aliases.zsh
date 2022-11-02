@@ -86,6 +86,5 @@ alias mp="TERM=xterm-256color multipass "
 
 # Aliases for Linux to match command names used on Darwin
 [[ "$(uname -s)" = "Linux" ]] && {
-    alias bat='batcat '
     alias nvim='vim '
 }
