@@ -129,6 +129,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Pipenv
 export PIPENV_VENV_IN_PROJECT=1
+[ -n "${commands[asdf]}" ] && export PIPENV_DEFAULT_PYTHON_VERSION="$(asdf which python current)"
 
 # create poetry virtual envs in project
 export POETRY_VIRTUALENVS_IN_PROJECT=1
@@ -145,6 +146,9 @@ export CLOUDSDK_PYTHON="${HOMEBREW_PREFIX}/bin/python3"
 
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
+
+# set default CC compiler to Homebrew's GCC, if installed
+[ -f "${HOMEBREW_PREFIX}/bin/gcc" ] && export CC="${HOMEBREW_PREFIX}/bin/gcc"
 
 # SSH agent provided by 1Password
 [[ -S "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ]] && \
