@@ -223,6 +223,19 @@ function M.setup()
       disable = false,
     }
 
+    -- Auto Pairs and Endwise Completion
+    use {
+      "windwp/nvim-autopairs",
+      wants = "nvim-treesitter",
+      module = {
+        "nvim-autopairs.completion.cmp",
+        "nvim-autopairs"
+      },
+      config = function()
+        require("config.autopairs").setup()
+      end,
+    }
+
     if packer_bootstrap then
       print "Neovim restart required after installation!"
       require("packer").sync()
