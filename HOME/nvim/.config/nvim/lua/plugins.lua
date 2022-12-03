@@ -206,6 +206,23 @@ function M.setup()
       end
     }
 
+    -- Completion via COQ
+    use {
+      "ms-jpq/coq_nvim",
+      branch = "coq",
+      event = "InsertEnter",
+      opt = true,
+      run = ":COQDeps",
+      config = function()
+        require("config.coq").setup()
+      end,
+      requires = {
+        { "ms-jpq/coq.artifacts", branch = "artifacts" },
+        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
+      },
+      disable = false,
+    }
+
     if packer_bootstrap then
       print "Neovim restart required after installation!"
       require("packer").sync()
