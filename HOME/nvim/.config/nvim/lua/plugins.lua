@@ -136,11 +136,11 @@ function M.setup()
 
     use {
       "nvim-lualine/lualine.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
       after = "nvim-treesitter",
       config = function()
         require("config.lualine").setup()
       end,
-      requires = { "nvim-web-devicons" },
     }
 
     use {
@@ -155,15 +155,13 @@ function M.setup()
     -- Treesitter
     use {
       "nvim-treesitter/nvim-treesitter",
+      requires = "nvim-treesitter/nvim-treesitter-textobjects",
       opt = true,
       event = "BufRead",
       run = ":TSUpdate",
       config = function()
         require("config.treesitter").setup()
       end,
-      requires = {
-        { "nvim-treesitter/nvim-treesitter-textobjects" }
-      },
     }
 
     -- FZF for fuzzy file finding
@@ -210,16 +208,16 @@ function M.setup()
     use {
       "ms-jpq/coq_nvim",
       branch = "coq",
+      requires = {
+        { "ms-jpq/coq.artifacts", branch = "artifacts" },
+        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
+      },
       event = "InsertEnter",
       opt = true,
       run = ":COQDeps",
       config = function()
         require("config.coq").setup()
       end,
-      requires = {
-        { "ms-jpq/coq.artifacts", branch = "artifacts" },
-        { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
-      },
       disable = false,
     }
 
