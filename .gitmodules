@@ -13,3 +13,6 @@
 [submodule "dotfiles-config-bash"]
 	path = HOME/bash
 	url = https://github.com/spottybones/dotfiles-config-bash.git
+[submodule "dotfiles-config-dircolors"]
+	path = HOME/dircolors
+	url = https://github.com/spottybones/dotfiles-config-dircolors.git
