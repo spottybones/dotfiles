@@ -19,3 +19,6 @@
 [submodule "dotfiles-config-powerline"]
 	path = HOME/powerline
 	url = https://github.com/spottybones/dotfiles-config-powerline.git
+[submodule "dotfiles-config-ipython"]
+	path = HOME/ipython
+	url = https://github.com/spottybones/dotfiles-config-ipython.git
