@@ -7,3 +7,6 @@
 [submodule "dotfiles-config-tmux"]
 	path = HOME/tmux
 	url = https://github.com/spottybones/dotfiles-config-tmux.git
+[submodule "dotfiles-config-bat"]
+	path = HOME/bat
+	url = https://github.com/spottybones/dotfiles-config-bat.git
