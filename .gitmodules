@@ -10,3 +10,6 @@
 [submodule "dotfiles-config-bat"]
 	path = HOME/bat
 	url = https://github.com/spottybones/dotfiles-config-bat.git
+[submodule "dotfiles-config-bash"]
+	path = HOME/bash
+	url = https://github.com/spottybones/dotfiles-config-bash.git
