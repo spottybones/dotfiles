@@ -1,5 +1,5 @@
 [submodule "dotfiles-config-lunarvim"]
-	path = HOME/lvim/.config/lvim
+	path = HOME/lvim
 	url = https://github.com/spottybones/dotfiles-config-lunarvim.git
 [submodule "dotfiles-config-git"]
 	path = HOME/git
