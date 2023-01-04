@@ -22,3 +22,6 @@
 [submodule "dotfiles-config-ipython"]
 	path = HOME/ipython
 	url = https://github.com/spottybones/dotfiles-config-ipython.git
+[submodule "dotfiles-config-jupyter"]
+	path = HOME/jupyter
+	url = https://github.com/spottybones/dotfiles-config-jupyter.git
