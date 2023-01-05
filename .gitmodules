@@ -34,3 +34,6 @@
 [submodule "dotfiles-config-nvim"]
 	path = HOME/nvim
 	url = https://github.com/spottybones/dotfiles-config-nvim.git
+[submodule "dotfiles-config-vim"]
+	path = HOME/vim
+	url = https://github.com/spottybones/dotfiles-config-vim.git
