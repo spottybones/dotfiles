@@ -31,3 +31,6 @@
 [submodule "dotfiles-config-zsh"]
 	path = HOME/zsh
 	url = https://github.com/spottybones/dotfiles-config-zsh.git
+[submodule "dotfiles-config-nvim"]
+	path = HOME/nvim
+	url = https://github.com/spottybones/dotfiles-config-nvim.git
