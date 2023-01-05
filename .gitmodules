@@ -25,3 +25,6 @@
 [submodule "dotfiles-config-jupyter"]
 	path = HOME/jupyter
 	url = https://github.com/spottybones/dotfiles-config-jupyter.git
+[submodule "dotfiles-config-pip"]
+	path = HOME/pip
+	url = https://github.com/spottybones/dotfiles-config-pip.git
