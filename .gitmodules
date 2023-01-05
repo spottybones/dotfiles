@@ -28,3 +28,6 @@
 [submodule "dotfiles-config-pip"]
 	path = HOME/pip
 	url = https://github.com/spottybones/dotfiles-config-pip.git
+[submodule "dotfiles-config-zsh"]
+	path = HOME/zsh
+	url = https://github.com/spottybones/dotfiles-config-zsh.git
