@@ -6,7 +6,7 @@ This is a collection of dotfiles and scripts for software I use on
 my laptop and other systems. Scripts and settings local to this
 repository are used for initial machine setup. Configurations for
 individual applications are included as submodules in the `/HOME`
-directory so I can develop and maintain them seperatly.
+directory so I can develop and maintain them seperately.
 
 ## Requirements
 
