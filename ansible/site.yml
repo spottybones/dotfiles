@@ -23,5 +23,5 @@
             state: latest
         - name: Download and install git-delta deb
           ansible.builtin.apt:
-            deb: https://github.com/dandavison/delta/releases/download/0.13.0/git-delta_0.13.0_amd64.deb
+            deb: https://github.com/dandavison/delta/releases/download/0.15.1/git-delta_0.15.1_amd64.deb
       when: ansible_system == "Linux"
