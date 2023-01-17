@@ -6,8 +6,9 @@
 
   tasks:
     - name: Tasks for Linux
+      # these are placed in a block to prevent installation on Darwin block:
       block:
-        - name: Ensure required packages are installed
+        - name: Ensure required Linux packages are installed
           ansible.builtin.package:
             name:
               - bat
@@ -22,7 +23,7 @@
               - tmux
               - zsh
             state: latest
-        - name: Download and install git-delta deb
+        - name: Download and install git-delta deb on Linux
           ansible.builtin.apt:
             deb: https://github.com/dandavison/delta/releases/download/0.15.1/git-delta_0.15.1_amd64.deb
       when: ansible_system == "Linux"

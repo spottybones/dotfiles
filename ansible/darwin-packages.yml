@@ -1,0 +1,17 @@
+---
+- name: Install Homebrew Packages on macOS
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Tasks for macOS/Darwin
+      # these are placed in a block to prevent installation on Linux
+      block:
+        - name: Install Homebrew Packages on macOS/Darwin
+          community.general.homebrew:
+            name:
+              - pipx
+              - asdf
+            state: present
+            update_homebrew: true
+      when: ansible_system == "Darwin"
