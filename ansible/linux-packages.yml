@@ -13,6 +13,7 @@
             name:
               - bat
               - build-essential
+              - direnv
               - fzf
               - gh
               - keychain

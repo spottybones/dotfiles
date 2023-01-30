@@ -10,8 +10,9 @@
         - name: Install Homebrew Packages on macOS/Darwin
           community.general.homebrew:
             name:
-              - pipx
               - asdf
+              - direnv
+              - pipx
             state: present
             update_homebrew: true
       when: ansible_system == "Darwin"
