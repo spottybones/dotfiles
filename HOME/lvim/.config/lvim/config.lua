@@ -171,6 +171,14 @@ formatters.setup {
 --       cmd = "TroubleToggle",
 --     },
 -- }
+lvim.plugins = {
+  {
+    "tpope/vim-surround",
+    setup = function()
+      vim.o.timeout = 500
+    end,
+  }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
