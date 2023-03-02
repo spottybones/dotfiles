@@ -127,6 +127,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# if LVIM is installed alias nvim to it
+[ -n "${commands[lvim]}" ] && alias nvim="lvim"
+
 # Pipenv
 export PIPENV_VENV_IN_PROJECT=1
 [ -n "${commands[asdf]}" ] && export PIPENV_DEFAULT_PYTHON_VERSION="$(asdf which python current)"
