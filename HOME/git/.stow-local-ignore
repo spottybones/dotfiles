@@ -1,0 +1,5 @@
+# Ignore files that may be included in a git repo
+\.git
+\.gitignore
+^/README.*
+^/LICENSE*

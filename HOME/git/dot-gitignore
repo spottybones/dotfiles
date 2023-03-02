@@ -1,0 +1,16 @@
+# files to always be ignored by git
+.DS_Store
+.VolumeIcon.icns
+.fseventsd
+
+# Python object bytecode
+*.pyc
+
+# VI swap file
+*.swp
+
+# Weird Icon files
+Icon
+
+# dotenv files
+.env
