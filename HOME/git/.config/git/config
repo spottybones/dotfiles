@@ -11,7 +11,7 @@
     pager = delta
     autocrlf = false
     ignorecase = false
-    excludesfile = ~/.gitignore
+    ; excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
     editor = nvim
 	safecrlf = false
