@@ -13,7 +13,7 @@
     ignorecase = false
     ; excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
-    editor = nvim
+    editor = lvim
 	safecrlf = false
 	eol = lf
 [branch]
