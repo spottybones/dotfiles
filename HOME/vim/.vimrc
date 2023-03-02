@@ -23,10 +23,10 @@ set binary
 set noeol
 " Centralize backups, swapfiles and undo history
 set history=200
-set backupdir=~/.local/share/vim/backups
-set directory=~/.local/share/vim/swaps
+set backupdir=$XDG_DATA_HOME/vim/backups
+set directory=$XDG_DATA_HOME/vim/swaps
 if exists("&undodir")
-  set undodir=~/.local/share/vim/undo
+  set undodir=$XDG_DATA_HOME/vim/undo
 endif
 
 " Respect modeline in files
@@ -112,7 +112,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 
-call plug#begin('~/.local/share/vim/plugged')
+call plug#begin("$XDG_DATA_HOME/vim/plugged")
 Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
