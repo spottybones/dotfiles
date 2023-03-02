@@ -88,6 +88,7 @@ plugins=(
     asdf
     aws
     brew
+    direnv
     fzf
     gcloud
     git
