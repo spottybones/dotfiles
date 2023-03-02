@@ -193,3 +193,6 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+
+-- Vim Global Options
+vim.g.python3_host_prog = "~/.asdf/shims/python3"
