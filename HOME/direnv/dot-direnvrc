@@ -1,0 +1,19 @@
+#!/bin/bash
+layout_poetry() {
+  if [[ ! -f pyproject.toml ]]; then
+    log_error "No pyproject.toml found. Use 'poetry new' or 'poetry init' to create one first."
+    exit 2
+  fi
+
+  local VENV
+  # shellcheck disable=SC2046
+  VENV=$(dirname $(poetry run which python))
+
+  VIRTUAL_ENV=$(echo "$VENV" | rev | cut -d '/' -f2- | rev)
+  POETRY_ACTIVE=1
+
+  export VIRTUAL_ENV
+  export POETRY_ACTIVE
+
+  PATH_add "$VENV"
+}
