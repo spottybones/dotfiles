@@ -44,10 +44,10 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 
 # OS X has no `md5sum`, so use `md5` as a fallback
-command -v md5sum > /dev/null || alias md5sum="md5"
+command -v md5sum >/dev/null || alias md5sum="md5"
 
 # OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
+command -v sha1sum >/dev/null || alias sha1sum="shasum"
 
 # URL-encode strings
 alias urlencode='python3 -c "import sys, urllib.parse as ul; print(ul.quote(sys.argv[1]));"'
@@ -83,8 +83,3 @@ alias grep="grep --color=auto"
 # we use a custom $TERM locally.
 alias ssh="TERM=xterm-256color ssh "
 alias mp="TERM=xterm-256color multipass "
-
-# Aliases for Linux to match command names used on Darwin
-[[ "$(uname -s)" = "Linux" ]] && {
-    alias nvim='vim '
-}
