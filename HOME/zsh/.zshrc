@@ -128,16 +128,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Pipenv
-export PIPENV_VENV_IN_PROJECT=1
-[ -n "${commands[asdf]}" ] && export PIPENV_DEFAULT_PYTHON_VERSION="$(asdf which python current)"
-
-# create poetry virtual envs in project
-export POETRY_VIRTUALENVS_IN_PROJECT=1
-
-# use globally defined pyenv for PIPX if pyenv is installed
-[ -n "${commands[asdf]}" ] && export PIPX_DEFAULT_PYTHON="$(asdf which python current)"
-
 # rehash commands to enable aliases for gnu-utils commands
 hash -rf
 
@@ -154,8 +144,3 @@ export GOPATH="${HOME}/.local/go"
 # SSH agent provided by 1Password
 [[ -S "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ]] && \
     export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-
-# source home .env file if present
-if [[ -f "${HOME}/.env" ]]; then
-    source "${HOME}/.env"
-fi
