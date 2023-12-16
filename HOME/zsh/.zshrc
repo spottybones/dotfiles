@@ -85,7 +85,6 @@ ZSH_CUSTOM=$HOME/.config/zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     ansible
-    asdf
     aws
     brew
     direnv

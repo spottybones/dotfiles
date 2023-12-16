@@ -10,7 +10,6 @@
         - name: Install Homebrew Packages on macOS/Darwin
           community.general.homebrew:
             name:
-              - asdf
               - direnv
               - pipx
             state: present

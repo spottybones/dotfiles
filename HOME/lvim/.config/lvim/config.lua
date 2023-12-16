@@ -10,9 +10,9 @@ vim.opt.relativenumber = true
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
-  enabled = true,
-  pattern = "*.lua",
-  timeout = 1000,
+	enabled = true,
+	pattern = "*.lua",
+	timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -102,11 +102,11 @@ lvim.builtin.treesitter.auto_install = true
 --     filetypes = { "typescript", "typescriptreact" },
 --   },
 -- }
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
-}
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+	{ command = "black", filetypes = { "python" } },
+	{ command = "isort", filetypes = { "python" } },
+})
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 -- lvim.plugins = {
@@ -116,12 +116,12 @@ formatters.setup {
 --     },
 -- }
 lvim.plugins = {
-  {
-    "tpope/vim-surround",
-    init = function()
-      vim.o.timeout = 500
-    end,
-  }
+	{
+		"tpope/vim-surround",
+		init = function()
+			vim.o.timeout = 500
+		end,
+	},
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
@@ -134,4 +134,4 @@ lvim.plugins = {
 -- })
 
 -- Vim Global Options
-vim.g.python3_host_prog = "~/.asdf/shims/python3"
+vim.g.python3_host_prog = "/usr/local/bin/python3"
