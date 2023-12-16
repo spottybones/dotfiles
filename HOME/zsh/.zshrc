@@ -130,6 +130,10 @@ source $ZSH/oh-my-zsh.sh
 # rehash commands to enable aliases for gnu-utils commands
 hash -rf
 
+# set default Python to latest Homebrew release
+export PATH="$(brew --prefix python@3.12)/bin:$PATH"
+export PATH="$(brew --prefix python@3.12)/libexec/bin:$PATH"
+
 # Update PATH for the Google Cloud SDK.
 export CLOUDSDK_HOME="${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
 export CLOUDSDK_PYTHON="${HOMEBREW_PREFIX}/bin/python3"
