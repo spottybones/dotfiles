@@ -137,9 +137,6 @@ export CLOUDSDK_PYTHON="${HOMEBREW_PREFIX}/bin/python3"
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
 
-# set default CC compiler to Homebrew's GCC, if installed
-[ -f "${HOMEBREW_PREFIX}/bin/gcc" ] && export CC="${HOMEBREW_PREFIX}/bin/gcc"
-
 # SSH agent provided by 1Password
 [[ -S "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ]] && \
     export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
