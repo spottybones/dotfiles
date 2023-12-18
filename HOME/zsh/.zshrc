@@ -134,10 +134,6 @@ hash -rf
 export PATH="$(brew --prefix python@3.12)/bin:$PATH"
 export PATH="$(brew --prefix python@3.12)/libexec/bin:$PATH"
 
-# Update PATH for the Google Cloud SDK.
-export CLOUDSDK_HOME="${HOMEBREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-export CLOUDSDK_PYTHON="${HOMEBREW_PREFIX}/bin/python3"
-
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
 
