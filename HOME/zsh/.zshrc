@@ -130,16 +130,6 @@ source $ZSH/oh-my-zsh.sh
 # rehash commands to enable aliases for gnu-utils commands
 hash -rf
 
-# set newest homebrew installed Python as the default Python
-if [[ -n "$(command -v brew)" ]]; then
-  LATEST_HOMEBREW_PYTHON="$(brew list | grep '^python@' | sort -V | tail -1)"
-  if [[ -n "${LATEST_HOMEBREW_PYTHON}" ]]; then
-    export PATH="$(brew --prefix ${LATEST_HOMEBREW_PYTHON})/bin:$PATH"
-    export PATH="$(brew --prefix ${LATEST_HOMEBREW_PYTHON})/libexec/bin:$PATH"
-  fi
-  unset LATEST_HOMEBREW_PYTHON
-fi
-
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
 
