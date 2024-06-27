@@ -11,6 +11,9 @@ if [[ -f "${HOME}/.cargo/env" ]]; then
     source "${HOME}/.cargo/env"
 fi
 
+# set home of Google Cloud SDK
+export CLOUDSDK_HOME="${HOME}/.local/google-cloud-sdk"
+
 # set home for GAM (Google Admin Manager)
 export GAM_HOME="${HOME}/.local/gam"
 
