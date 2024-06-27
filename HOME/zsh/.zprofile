@@ -9,4 +9,7 @@ case "$(uname -s)-$(arch)" in
     Darwin-arm64)
         eval "$(/opt/homebrew/bin/brew shellenv)"
         ;;
+    Linux-x86_64)
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        ;;
 esac
