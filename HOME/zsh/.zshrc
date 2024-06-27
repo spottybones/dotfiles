@@ -88,7 +88,6 @@ plugins=(
     aws
     brew
     direnv
-    fzf
     gcloud
     git
     gnu-utils
@@ -97,6 +96,7 @@ plugins=(
     rust
     tmux
     vi-mode
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
