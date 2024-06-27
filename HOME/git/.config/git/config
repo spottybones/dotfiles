@@ -31,6 +31,7 @@
 [delta]
     navigate = true
     light = false
+    dark = true
 [merge]
     conflictstyle = diff3
 [rebase]
