@@ -2,3 +2,4 @@
 --italic-text=always
 --map-syntax=Justfile:Makefile
 --map-syntax="**/.ssh/config.d/*:SSH Config"
+--map-syntax="uv.lock:TOML"
