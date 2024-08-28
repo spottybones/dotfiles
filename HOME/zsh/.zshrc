@@ -97,8 +97,6 @@ plugins=(
     gcloud
     git
     gnu-utils
-    macos
-    poetry
     rust
     tmux
     vi-mode
