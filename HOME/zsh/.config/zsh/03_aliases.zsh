@@ -32,11 +32,6 @@ alias week='date +%V'
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 # alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
 
-# IP addresses
-alias ip='echo $(curl -s https://diagnostic.opendns.com/myip)'
-# alias localip="ipconfig getifaddr en0"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
-
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
