@@ -144,3 +144,8 @@ export GOPATH="${HOME}/.local/go"
 # ensure that zsh completions get loaded
 autoload -Uz compinit
 compinit
+
+# clean up path: remove duplicate and non-existent directories
+typeset -U PATH path
+path=($^path(N-/))
+export PATH
