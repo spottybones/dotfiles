@@ -15,7 +15,7 @@ fi
 export CLOUDSDK_HOME="${HOME}/.local/google-cloud-sdk"
 
 # set home for GAM (Google Admin Manager)
-export GAM_HOME="${HOME}/.local/gam"
+export GAM_HOME="${HOME}/.local/gam7"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
