@@ -12,10 +12,10 @@ directory so I can develop and maintain them seperately.
 
 The following software is required to bootstrap a system:
 
- * A package manager (I use [Homebrew](https://brew.sh/) on macOS)
- * [Ansible](https://www.ansible.com/community)
- * [GNU Stow](https://www.gnu.org/software/stow/)
- * Make (optional)
+* A package manager (I use [Homebrew](https://brew.sh/) on macOS)
+* [Ansible](https://www.ansible.com/community)
+* [GNU Stow](https://www.gnu.org/software/stow/)
+* Make (optional)
 
 ## Installation
 
