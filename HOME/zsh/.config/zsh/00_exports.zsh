@@ -32,9 +32,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 [ -f "$HOME/.config/pip/pip.conf" ] && export PIP_CONFIG_FILE="$HOME/.config/pip/pip.conf"
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
-
 [ -f "$HOME/.boto" ] && export BOTO_CONFIG="$HOME/.boto"
 
 # set GPG_TTY for gpg-agent
