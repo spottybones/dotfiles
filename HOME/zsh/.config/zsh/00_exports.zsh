@@ -40,22 +40,3 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # set GPG_TTY for gpg-agent
 GPG_TTY=$(tty)
 export GPG_TTY
-
-my-jupyter-notebook () {
-    docker run --rm \
-    --name jupyter-notebook \
-    -v $(pwd):/home/jovyan \
-    -v $HOME/.jupyter:/home/jovyan/.jupyter \
-    -v $HOME/.ipython:/home/jovyan/.ipython \
-    -p 8888:8888 \
-    jupyter/datascience-notebook start-notebook.sh
-}
-
-my-ipython () {
-    docker run --rm \
-    -it \
-    --name ipython \
-    -v $(pwd):/home/jovyan/work \
-    -v $HOME/.ipython:/home/jovyan/.ipython \
-    jupyter/datascience-notebook start.sh ipython $@
-}
