@@ -17,8 +17,12 @@ export LC_ALL="en_US.UTF-8"
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
 
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X"
+# if "bat" is installed use it for displaying man pages
+if [[ ${+commands[bat]} ]]; then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+else
+  export MANPAGER="less -X"
+fi
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
