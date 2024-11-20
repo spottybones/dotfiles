@@ -135,9 +135,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# rehash commands to enable aliases for gnu-utils commands
-hash -rf
-
 # Set GOPATH
 export GOPATH="${HOME}/.local/go"
 
