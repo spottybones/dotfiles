@@ -18,7 +18,9 @@ alias oo="open ."
 
 # base directory listing
 alias l="ls"
-alias ll='ls -l'
+if [[ -z ${plugins[(r)eza]} ]]; then
+  alias ll='ls -l'
+fi
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
