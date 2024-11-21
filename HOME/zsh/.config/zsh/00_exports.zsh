@@ -6,9 +6,15 @@ export EDITOR="vim"
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoredups
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt extendedglob
 # Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+export HISTORY_IGNORE='(ls|cd|cd -|-|pwd|exit|date|* --help|l|ll|lT|op *)?'
+zshaddhistory() {
+  emulate -L zsh
+  [[ ${1} != ${~HISTORY_IGNORE} ]]
+}
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8"
